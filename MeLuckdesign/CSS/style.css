@@ -1,0 +1,200 @@
+@charset "utf-8";
+
+
+body{
+	margin: auto;
+	max-width:900px;
+}
+
+.FV{
+	position: relative;
+}
+
+.CTA{
+	margin: auto;
+	max-width: 900px;
+	text-align: center;
+	
+	position: absolute; /* 基準を親要素に指定 */
+  /* ここでボタンの位置やサイズを設定 */
+  top: 100%; /* 上から50%の位置 */
+  left: 7%; /* 左から50%の位置 */
+right: 5%;
+  transform: translate(0%, -112%); /* 基準点に合わせてボタンを移動 */	
+	
+}
+
+
+/*ボタンきらりん効果*/
+.c-button._shiny {
+    display: block;
+    position: relative;
+    padding: auto;
+    
+    margin:auto;
+    max-width:900px;
+    overflow: hidden;
+  transition: 300ms;
+}
+
+.c-button._shiny::before {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    top: -180px;
+    left: 20px;
+    width: 30px;
+    height: 50%;
+    background-color: #ffffff;
+    transition: 300ms;
+    animation: shinyshiny 2.5s ease-in-out infinite;
+	margin-left: 50px;
+}
+
+/*ホバー効果*/
+.c-button._shiny:hover {
+    text-decoration: none;
+    color: #fff;
+    box-shadow: none;
+    -webkit-transform: translateY(3px);
+}
+
+@-webkit-keyframes shinyshiny {
+    0% { -webkit-transform: scale(0) rotate(45deg); opacity: 0; }
+    80% { -webkit-transform: scale(0) rotate(45deg); opacity: 0.2; }
+    81% { -webkit-transform: scale(4) rotate(45deg); opacity: 0.5
+		; }
+    100% { -webkit-transform: scale(50) rotate(45deg); opacity: 0; }
+}
+
+
+.page3{
+	position: relative;
+}
+
+
+.CTA2{
+	margin: auto;
+	max-width: 900px;
+	text-align: center;
+	
+	position: absolute; /* 基準を親要素に指定 */
+  /* ここでボタンの位置やサイズを設定 */
+  top: 98%; /* 上から50%の位置 */
+  left: 7%; /* 左から50%の位置 */
+right: 5%;
+  transform: translate(0%, -112%); /* 基準点に合わせてボタンを移動 */
+
+}
+
+
+.price{
+	position: relative;	
+	
+}
+
+.p-back{
+	background-image: url("../img/1x/puranback@2x.webp");
+	background-repeat: repeat-y;
+	background-size: cover;
+	padding-bottom: 50px;
+}
+
+
+.p-title{
+	position: absolute; /* 基準を親要素に指定 */
+  /* ここでボタンの位置やサイズを設定 */
+  top: 0%; /* 上から50%の位置 */
+  left: 0%; /* 左から50%の位置 */
+right: 0%;
+
+}
+
+
+.Rplan{
+	position: relative;
+	margin: 0px 15px 0px;
+	background-color: white;
+}
+
+
+.button{
+	position: absolute; /* 基準を親要素に指定 */
+  /* ここでボタンの位置やサイズを設定 */
+  top: 75%; /* 上から50%の位置 */
+  left: 20%; /* 左から50%の位置 */
+right: 20%;
+}
+
+
+
+
+.gazou {
+	background-color: white;
+	
+}
+
+.manay {
+	margin: 20px 90px 0 90px;
+}
+
+.manay2 {
+	margin: 30px 40px 30px 40px;
+}
+
+.more {
+	margin: 0px 70px 70px 70px;
+	padding-bottom: 10px;
+}
+
+
+
+.service {
+	margin: -50px 0 20px 0 ;
+	text-align: center;
+	max-width: 900px;
+	padding: 0 15px;
+}
+
+.Bplan {
+	position: relative;
+	margin: 0px 15px 0px;
+	background-color: white;
+}
+
+.Pplan {
+	position: relative;
+	margin: 0px 15px 0px;
+	background-color: white;
+}
+.puran {
+	margin-top: -100px;
+}
+
+.FAQ {
+	position: relative;
+}
+
+.CTA3 {
+	margin: auto;
+	max-width: 900px;
+	text-align: center;
+	
+	position: absolute; /* 基準を親要素に指定 */
+  /* ここでボタンの位置やサイズを設定 */
+  top: 100%; /* 上から50%の位置 */
+  left: 7%; /* 左から50%の位置 */
+right: 5%;
+  transform: translate(0%, -112%); /* 基準点に合わせてボタンを移動 */
+}
+
+#more-content2 {
+	padding-bottom: 30px;
+}
+#more-content3 {
+	padding-bottom: 30px;
+}
+
+
+
+      

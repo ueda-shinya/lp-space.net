@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<title>syoukoアカデミー</title>
+
+<style type="text/css">
+@import url("css/reset.css");
+</style>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<meta name="viewport" content="width=device-width,initial-scale=1" >
+	
+	
+	
+</head>
+
+<body>
+	
+<div class="FV">
+	<div class="FVimg"><img SRC="img/FV@2x.webp" alt="FV" width="100%">
+		<a href="https://step.lme.jp/liff-callback/PkqRs7KWB3?liff.state=%3Fproduct_id%3D16041%26type%3Dproduct-detail&liff.referrer=https%3A%2F%2Fxb829329.xbiz.jp%2F"><div class="btn1"><div class="c-button _shiny"><img src="img/cta@2x.webp" alt="ボタン" width="100%"  loading="lazy" decoding="async"></div></div></a></div>
+	
+	</div>
+	
+<div class="section">
+	<img src="img/page1@2x.webp" alt="ページ1" width="100%"  loading="lazy" decoding="async">
+	</div>	
+	
+	<div class="section">
+	<img src="img/page2@2x.webp" alt="ページ2" width="100%"  loading="lazy" decoding="async">
+	</div>	
+	
+	<div class="section">
+	<img src="img/page3@2x.webp" alt="ページ3" width="100%" loading="lazy" decoding="async">
+	</div>	
+	
+	<!--受講生の声-->
+	<div class="student">
+		<img src="img/page4taitle@2x.webp" alt="受講生の声" width="100%" loading="lazy" decoding="async">
+		
+	<!--voice1-->
+<div class="voice">
+<img src="img/VOICE1-1@2x.webp" alt="" width="100%" loading="lazy" decoding="async">
+				
+<div id="readMoreBlock">
+<div class="readMoreInner">
+    <div class="readMoreContainer">
+        <p><img src="img/VOICE1-2@2x.webp" alt="" width="100%" loading="lazy" decoding="async"></p>
+        <p><img src="img/VOICE1-3@2x.webp" alt="" width="100%" loading="lazy" decoding="async"></p>
+    </div>
+    <button class="readMoreBtn">もっと見る</button>
+					
+</div>
+</div>
+</div>
+	
+<!--voice2-->
+<div class="voice">
+<img src="img/VOICE2-1@2x.webp" alt="" width="100%" loading="lazy" decoding="async">
+				
+<div id="readMoreBlock2">
+<div class="readMoreInner">
+    <div class="readMoreContainer">
+        <p><img src="img/VOICE2-2@2x.webp" alt="" width="100%" loading="lazy" decoding="async"></p>
+        <p><img src="img/VOICE2-3@2x.webp" alt="" width="100%" loading="lazy" decoding="async"></p>
+    </div>
+    <button class="readMoreBtn">もっと見る</button>
+					
+</div>
+</div>
+</div>	
+		
+<!--voice3-->
+<div class="voice">
+<img src="img/VOICE3-1@2x.webp" alt="" width="100%" loading="lazy" decoding="async">
+				
+<div id="readMoreBlock3">
+<div class="readMoreInner">
+    <div class="readMoreContainer">
+        <p><img src="img/VOICE3-2@2x.webp" alt="" width="100%" loading="lazy" decoding="async"></p>
+        <p><img src="img/VOICE3-3@2x.webp" alt="" width="100%" loading="lazy" decoding="async"></p>
+    </div>
+    <button class="readMoreBtn">もっと見る</button>
+					
+</div>
+</div>
+</div>	
+	
+		
+		
+
+</div>
+	
+<!--受講生の声ここまで-->
+	
+  
+ <div class="page5">
+	 <img src="img/page5@2x.webp" alt="ページ5" width="100%" loading="lazy" decoding="async">
+	 <a href="https://step.lme.jp/liff-callback/PkqRs7KWB3?liff.state=%3Fproduct_id%3D16041%26type%3Dproduct-detail&liff.referrer=https%3A%2F%2Fxb829329.xbiz.jp%2F"><div class="btn2"><div class="c-button _shiny"><img src="img/cta@2x.webp" alt="ボタン" width="100%" loading="lazy" decoding="async"></div></div></a>
+	</div>   
+	
+	
+ <div class="section">
+	<img src="img/page6@2x.webp" alt="ページ3" width="100%" loading="lazy" decoding="async">
+	</div>	 
+  
+	<div class="section">
+	<div class="page7"><img src="img/page7@2x.webp" alt="ページ3" width="100%" loading="lazy" decoding="async">
+		<a href="https://step.lme.jp/liff-callback/PkqRs7KWB3?liff.state=%3Fproduct_id%3D16041%26type%3Dproduct-detail&liff.referrer=https%3A%2F%2Fxb829329.xbiz.jp%2F"><div class="btn3"><div class="c-button _shiny"><img src="img/cta@2x.webp" alt="ボタン" width="100%" loading="lazy" decoding="async"></div></div></a>
+		
+		</div>
+	</div>	
+
+	 <div class="section">
+	<img src="img/page8@2x.webp" alt="ページ3" width="100%" loading="lazy" decoding="async">
+	</div>	
+		
+	
+<!--もっと見るの動的部分-->	
+<script>	
+const readmore = document.querySelectorAll('.readMoreInner');
+
+Array.from(readmore).forEach(function(more){
+
+  const btn = more.querySelector('.readMoreBtn');
+  const content = more.querySelector('.readMoreContainer');
+
+  // ボタンクリックでイベント処理
+  btn.addEventListener('click', () => {
+    if(!content.classList.contains('show')){
+      content.style.maxHeight = content.scrollHeight + 'px';
+      content.classList.add('show');
+      btn.innerText = '閉じる';
+    } else {
+      content.style.maxHeight = '250px';
+      content.classList.remove('show');
+      btn.innerText = 'もっと見る';
+    }
+  });
+});	
+</script>	
+	
+</body>
+</html>

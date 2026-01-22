@@ -1,0 +1,80 @@
+@charset "utf-8";
+
+.FV{
+	text-align: center;
+	max-width: 900px;
+	margin: auto;
+	position: relative;
+    
+}
+
+.CTA1 {
+	
+	max-width: 900px;
+	text-align: center;
+	margin: auto;
+
+}
+
+.btn{
+	text-align: center;
+	max-width: 900px;
+	margin: auto;
+
+	position: absolute; /* 基準を親要素に指定 */
+  /* ここでボタンの位置やサイズを設定 */
+  top: 20%; /* 上から50%の位置 */
+  left: 5%; /* 左から50%の位置 */
+right: 5%;
+  transform: translate(0%, -120%); /* 基準点に合わせてボタンを移動 */
+}
+
+.section{
+	text-align: center;
+	max-width: 900px;
+	margin: auto;
+}
+
+
+.CTA2 {
+	max-width: 900px;
+	text-align: center;
+	margin: auto;
+	position: relative;
+}
+
+.btn2{
+	text-align: center;
+	max-width: 900px;
+	margin: auto;
+	padding: 40px;
+	position: absolute; /* 基準を親要素に指定 */
+  /* ここでボタンの位置やサイズを設定 */
+  top: 20%; /* 上から50%の位置 */
+  left: 5%; /* 左から50%の位置 */
+right: 5%;
+  transform: translate(0%, -150%); /* 基準点に合わせてボタンを移動 */
+	
+}
+
+
+
+/* 動くボタン */
+.updown {
+animation-name:updown1;   /* アニメーション名の指定 */
+animation-delay:0s;   /* アニメーションの開始時間指定 */
+animation-duration: 3s;   /* アニメーション動作時間の指定 */
+animation-timing-function: ease-in-out;  /* アニメーションの動き指定（徐々に早く）*/
+animation-iteration-count: infinite; 
+}
+@keyframes updown1 {
+0% {
+transform: translateY(0);
+}
+50% {
+transform: translateY(-20px);
+}
+100% {
+transform: translateY(0);
+}
+}
