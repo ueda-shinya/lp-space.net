@@ -302,3 +302,48 @@ a:hover img {
   bottom: 0.05em;
   transform: translateX(-50%);
 }
+
+
+/* =========================
+  fixed scroll CTA 2026-02 更新
+========================= */
+.c-scroll-cta-wrap{
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  /* 白の透過背景 */
+  background: rgba(255,255,255,0.5);
+  backdrop-filter: blur(1px);
+  border-top: 1px solid rgba(0,0,0,0.08);
+  padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
+  z-index: 9999;
+
+  /* 初期は非表示 */
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .25s ease;
+}
+
+.c-scroll-cta-wrap.is-visible{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.c-scroll-cta{
+  display: block;
+  /* width: min(92vw, 420px); */
+  margin: 0 auto;
+}
+
+.c-scroll-cta img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+@media (min-width: 375px){
+  .c-scroll-cta{
+    width: min(92vw, 520px);
+  }
+}

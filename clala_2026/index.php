@@ -55,57 +55,64 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
       <img src="./assets/images/clala-lp_03.webp" width="750" height="2650" decoding="async" loading="lazy">
       <img src="./assets/images/clala-lp_04.webp" width="750" height="3950" decoding="async" loading="lazy">
       <img src="./assets/images/clala-lp_05.webp" width="750" height="500" decoding="async" loading="lazy">
-      <!--  -->
-      <form id="contact-form" name="contact" action="sendmail.php" method="POST">
-        <h2>お申込みフォーム</h2>
-        <div>
-          <label>お名前 <span style="color:red;font-size:0.75em;">(必須)</span>
-            <input type="text" name="name" required>
-          </label>
-        </div>
-        <div>
-          <label>電話番号 <span style="color:red;font-size:0.75em;">(必須)</span>
-            <input type="tel" name="tel" required>
-          </label>
-        </div>
-        <div>
-          <label>メールアドレス <span style="color:red;font-size:0.75em;">(必須)</span>
-            <input type="email" name="email" required>
-          </label>
-        </div>
-        <div>
-          <label>美容歴 <span style="color:red;font-size:0.75em;">(必須)</span>
-          </label>
-          <select name="career" required aria-required="true">
-            <option value="" selected disabled>選択してください</option>
-            <option value="3～5年">3～5年</option>
-            <option value="6～10年">6～10年</option>
-            <option value="11年以上">11年以上</option>
-          </select>
-        </div>
-        <div>
-          <label>ご質問・ご要望<textarea name="message" rows="5" placeholder="ご自由にご記入ください"></textarea>
-          </label>
-        </div>
-        <!-- CSRFトークン -->
-        <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
-        <!-- ハニーポット -->
-        <div style="position:absolute; left:-9999px;" aria-hidden="true">
-          <label>ニックネーム（空欄にしてください）： <input type="text" name="nickname" tabindex="-1" autocomplete="off">
-          </label>
-        </div>
-        <button type="submit">まずは見学・相談する（無料）</button>
-      </form>
-      <!--  -->
-      <img src="./assets/images/clala-lp_06.webp" width="750" height="449" decoding="async" loading="lazy">
+      <!-- お申込みフォーム -->
+      <div id="cta-hide-area">
+        <form id="contact-form" name="contact" action="sendmail.php" method="POST">
+          <h2>お申込みフォーム</h2>
+          <div>
+            <label>お名前 <span style="color:red;font-size:0.75em;">(必須)</span>
+              <input type="text" name="name" required>
+            </label>
+          </div>
+          <div>
+            <label>電話番号 <span style="color:red;font-size:0.75em;">(必須)</span>
+              <input type="tel" name="tel" required>
+            </label>
+          </div>
+          <div>
+            <label>メールアドレス <span style="color:red;font-size:0.75em;">(必須)</span>
+              <input type="email" name="email" required>
+            </label>
+          </div>
+          <div>
+            <label>美容歴 <span style="color:red;font-size:0.75em;">(必須)</span>
+            </label>
+            <select name="career" required aria-required="true">
+              <option value="" selected disabled>選択してください</option>
+              <option value="3～5年">3～5年</option>
+              <option value="6～10年">6～10年</option>
+              <option value="11年以上">11年以上</option>
+            </select>
+          </div>
+          <div>
+            <label>ご質問・ご要望<textarea name="message" rows="5" placeholder="ご自由にご記入ください"></textarea>
+            </label>
+          </div>
+          <!-- CSRFトークン -->
+          <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
+          <!-- ハニーポット -->
+          <div style="position:absolute; left:-9999px;" aria-hidden="true">
+            <label>ニックネーム（空欄にしてください）： <input type="text" name="nickname" tabindex="-1" autocomplete="off">
+            </label>
+          </div>
+          <button type="submit">まずは見学・相談する（無料）</button>
+        </form>
+        <img src="./assets/images/clala-lp_06.webp?20260407" width="750" height="449" decoding="async" loading="lazy">
+      </div>
     </main>
-    <footer style="display:none;">
-    </footer>
+    <!-- 固定スクロールCTA（フォームへ） -->
+    <div class="c-scroll-cta-wrap" aria-label="フォームへスクロール">
+      <a href="#contact-form" class="c-scroll-cta">
+        <img src="./assets/images/scroll_btn.png" alt="フォームへ" width="750" height="180" decoding="async">
+      </a>
+    </div>
+
+    <footer style="display:none;"></footer>
     <!-- スクリプト -->
     <script src="./assets/js/hide-footer-on-cta.js" defer></script>
     <script src="./assets/js/lazyload-prioritize.js" defer></script>
     <script src="./assets/js/form-handler.js" defer></script>
     <script src="./assets/js/zip.js" defer></script>
+    <script src="./assets/js/scroll-cta.js" defer></script>
   </body>
-
 </html>
